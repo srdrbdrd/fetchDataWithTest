@@ -22,7 +22,7 @@ const Input = props => {
 
 const styles = StyleSheet.create({
     container: {
-        height: convertHeight(80),
+        height: convertHeight(70),
         width: convertWidth(400),
         justifyContent: 'center',
         alignSelf: 'center',
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
         marginTop: convertWidth(12)
     },
     containerAbout: {
-        height: convertHeight(160),
+        height: convertHeight(140),
         width: convertWidth(400),
         justifyContent: 'center',
         alignSelf: 'center',
