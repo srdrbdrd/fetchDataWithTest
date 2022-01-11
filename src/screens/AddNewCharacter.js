@@ -4,7 +4,7 @@ import { View, Text } from 'react-native'
 const AddNewCharacter = () => {
     return (
         <View>
-            <Text>ADD NEW CHAR</Text>
+            <Text>ADD</Text>
         </View>
     )
 }
