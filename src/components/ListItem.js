@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
         margin: convertHeight(10),
     },
     characterNameTextStyle: {
-        fontSize: convertWidth(22),
+        fontSize: convertWidth(20),
         color: 'black',
         fontWeight: '600',
         marginLeft: convertWidth(10),

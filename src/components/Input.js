@@ -14,7 +14,8 @@ const Input = props => {
                 underlineColorAndroid="transparent"
                 autoCapitalize="none"
                 onChangeText={props.changeOnText}
-                multiline={true}
+                multiline={props.about ? true : false}
+                value={props.value}
             />
         </View>
     );
@@ -22,12 +23,12 @@ const Input = props => {
 
 const styles = StyleSheet.create({
     container: {
-        height: convertHeight(70),
+        height: convertHeight(80),
         width: convertWidth(400),
         justifyContent: 'center',
         alignSelf: 'center',
         borderRadius: convertWidth(2),
-        marginTop: convertWidth(12)
+        marginTop: convertWidth(12),
     },
     containerAbout: {
         height: convertHeight(140),
@@ -47,7 +48,7 @@ const styles = StyleSheet.create({
         flex: 1,
         fontWeight: 'bold',
         marginHorizontal: convertWidth(10),
-        fontSize: 16,
+        fontSize: convertWidth(16),
         backgroundColor: 'white',
         borderWidth: convertWidth(1),
         borderColor: 'grey',
@@ -58,7 +59,7 @@ const styles = StyleSheet.create({
         flex: 1,
         fontWeight: 'bold',
         marginHorizontal: convertWidth(10),
-        fontSize: 16,
+        fontSize: convertWidth(16),
         backgroundColor: 'white',
         borderWidth: convertWidth(1),
         borderColor: 'grey',

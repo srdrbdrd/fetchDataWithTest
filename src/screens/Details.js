@@ -19,7 +19,7 @@ const Details = props => {
                     style={styles.headerJobTextStyle}>
                     {job}
                 </Text>
-                <Text style={styles.aboutTextStyle = {}}>{about}</Text>
+                <Text style={styles.aboutTextStyle}>{about}</Text>
             </View>
         </ScrollView>
     );
