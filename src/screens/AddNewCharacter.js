@@ -4,6 +4,15 @@ import AddNewCharacterButton from '../components/AddNewCharacterButton';
 import Input from '../components/Input';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
+export const idChecker = (data) => {
+    let randomId = (Math.round(Math.random() * 1000) + 1).toString();
+    if (data.some(data => data.id == randomId)) {
+        idChecker();
+    } else {
+        return randomId;
+    }
+};
+
 const AddNewCharacter = props => {
     const data = props.route.params.data;
     const [newData, setNewData] = useState(data);
@@ -13,14 +22,7 @@ const AddNewCharacter = props => {
     const [textAbout, setTextAbout] = useState('');
     const [textImageLink, setTextImageLink] = useState('');
 
-    const idChecker = () => {
-        let randomId = (Math.round(Math.random() * 1000) + 1).toString();
-        if (data.some(data => data.id == randomId)) {
-            idChecker();
-        } else {
-            return randomId;
-        }
-    };
+
 
     const inputChecker = () => {
         if (!textName.trim() || !textJob.trim() || !textAbout.trim() || !textImageLink.trim()) {
@@ -36,7 +38,7 @@ const AddNewCharacter = props => {
                 name: textName,
                 avatar: textImageLink,
                 job: textJob,
-                id: idChecker(),
+                id: idChecker(data),
                 about: textAbout,
             }
         ];
